@@ -5,6 +5,13 @@ require "hydra/validations"
 
 module Hydra
   module Roles
+    extend ActiveSupport::Concern
+
+    module ClassMethods
+      def configure
+        yield self
+      end
+    end
 
   end
 end
