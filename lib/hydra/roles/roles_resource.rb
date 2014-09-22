@@ -6,7 +6,7 @@ module Hydra
     class RolesResource < ActiveTriples::Resource
 
       RolesVocabulary.each do |term|
-        property term.label, predicate: term
+        property term.to_s.split(/[\/\#]/).last, predicate: term
       end
 
       def self.from_hash roles_hash
