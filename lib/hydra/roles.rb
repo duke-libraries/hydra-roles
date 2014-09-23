@@ -1,16 +1,13 @@
 require "hydra/roles/version"
 require "active_triples"
-require "hydra/validations"
-
+require "active_support"
 
 module Hydra
   module Roles
     extend ActiveSupport::Concern
 
-    module ClassMethods
-      def configure
-        yield self
-      end
+    included do
+      include Hydra::Roles::ModelAdditions
     end
 
   end

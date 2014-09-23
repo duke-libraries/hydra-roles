@@ -1,4 +1,5 @@
 require 'rdf/isomorphic'
+require 'hydra/validations'
 
 module Hydra
   module Roles

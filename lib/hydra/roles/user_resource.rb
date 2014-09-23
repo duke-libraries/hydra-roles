@@ -1,3 +1,5 @@
+require 'hydra/roles/principal_resource'
+
 module Hydra
   module Roles
     class UserResource < PrincipalResource
